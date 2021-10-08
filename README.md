@@ -2,12 +2,15 @@
 
 Name of Team:  Debug Web-Bug
 
+
 Members of the Team:
 
 Amneet Singh, amneet06@my.yorku.ca, Section B, Lab 1
+
 Susan-Ngoc Nguyen, sn98@my.yorku.ca, Section B, Lab 1
 
 Xiyu Zhang, xiyu@my.yorku.ca, Section B, Lab 1
+
 
 Title of the Project: Flowlist
 
