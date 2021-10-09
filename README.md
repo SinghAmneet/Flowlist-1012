@@ -1,6 +1,6 @@
-# Flowlist
+# Flowlist 📚
 
-### Name of the Team: Debug Web-Bug
+### Name of the Team: Debug Web-Bug 
 
 ### Title of the Project: Flowlist
 
