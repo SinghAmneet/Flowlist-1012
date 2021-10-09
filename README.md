@@ -4,7 +4,7 @@
 
 ### Title of the Project: Flowlist
 
-### Project Description
+### Project Description:
 
 A productivity website with a minimalistic UI designed to allow users to navigate and create essential components for day-to-day tasks. These components include a to-do list area and a note-taking section as tasks.
 When creating tasks, users can prioritize what tasks are important by filtering them by date, category, and reminders. They can also organize the workplace by moving different tasks around the page to their liking. Spreadsheets, tables and other toolkits can also be integrated inside lists.
