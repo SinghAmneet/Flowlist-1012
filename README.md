@@ -21,7 +21,7 @@ When creating tasks, users can prioritize what tasks are important by filtering 
 
 ---
 
-### Functional Requirment Draft
+### Functional Requirements Draft
 
 1. Users can login in a startup page using a input box called username and password type interface to access their account on Flowlist
 2. Users can access different types of essential  components such as tasks, lists, inbox, trash bin, etc by clicking on a “=” button on the top left of the website. This will open up a sidebar for quick links/buttons to different types of components. The sidebar can close if the user clicks the “=” button to have more space for their component.
