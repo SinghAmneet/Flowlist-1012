@@ -39,6 +39,12 @@ When creating tasks, users can prioritize what tasks are important by filtering 
 14. Users can add images and links inside tasks. 
 15. Users can view a list of completed tasks by navigating to the “=” bar and selecting “All Tasks”.
 
+---
+
+### Interface Desgin 
+[---> Link to Lo-Fi Wireframe UI Design <---](https://drive.google.com/file/d/1bCERvGgOveNpXz0KfR1EvmwaKmdso0ol/view?usp=sharing)
+
+---
 <!--For more information, you can check out our Google Docs [HERE](https://docs.google.com/document/d/1rmXR6-ixbtCNF4HPbZWV0VuwITY2e_miXYyQVbG6H3c/edit?usp=sharing) (You need to be signed in your yorku email)-->
 
 
