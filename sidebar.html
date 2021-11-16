@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowlist</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="sidebar.css">
+    <!-- CDN Link to Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="sidebar.js"></script>
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bxs-layer'></i> <!-- Flowlist Logo -->
+                <div class="logo_name">Flowlist</div>
+            </div>
+            <i class='bx bx-menu' id="button_sidebar"></i> <!-- Sidebar menu button "=" -->
+        </div>
+        <ul class="menu_bar">
+            <!-- Inbox -->
+            <li>
+                <a href="#">
+                    <i class='bx bxs-inbox'></i>
+                    <span class="link_names">Inbox</span>
+                </a>
+                <span class="tooltip">Inbox</span>
+            </li>
+            <!-- Tasks -->
+            <li>
+                <a href="#">
+                    <i class='bx bx-task'></i>
+                    <span class="link_names">Tasks</span>
+                </a>
+                <span class="tooltip">Tasks</span>
+            </li>
+            <!-- Lists -->
+            <li>
+                <a href="#">
+                    <i class='bx bx-list-ul'></i>
+                    <span class="link_names">Lists</span>
+                </a>
+                <span class="tooltip">Lists</span>
+            </li>
+            <!-- Archive -->
+            <li>
+                <a href="#">
+                    <i class='bx bxs-archive-in'></i>
+                    <span class="link_names">Archive</span>
+                </a>
+                <span class="tooltip">Archive</span>
+            </li>
+            <!-- Trash -->
+            <li>
+                <a href="#">
+                    <i class='bx bx-trash'></i>
+                    <span class="link_names">Trash</span>
+                </a>
+                <span class="tooltip">Trash</span>
+            </li>
+            <!-- Log Out -->
+            <li>
+                <a href="#">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                    <span class="link_names">Log Out</span>
+                </a>
+                <span class="tooltip">Log Out</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let btn = document.querySelector("#button_sidebar");
+        let sidebar = document.querySelector(".sidebar");
+
+        btn.onclick = function(){
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
