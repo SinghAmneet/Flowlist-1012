@@ -1,132 +1,158 @@
-/* CDN Link from Google Fonts */
+/* Flowlist sidebar for component navigation */
+/* CDN Link from Google Fonts for Roboto style sheet*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
+    /* The margin and padding is set all html elements to zero. Every browser use different defalt margins, which may cause this sidebar to look different.
+    Setting all elements to 0 margins/paddings will make this sidebar look the same on every browser */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto";
+    font-family: "Roboto"; /*This font is imported from the CDN link near line 1.*/
 }
 
 body{
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh; /* stretches the body height 100% of the viewport height */
     width: 100%;
     overflow: hidden;
 }
 
 .sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 78px;
-    background: lightcoral;
-    padding: 6px 14px;
-    transition: all 0.5s ease;
+    position: fixed; /* The sidebar stays at the same place on the page */
+    top: 0; /*Positioned to the top left of the page*/
+    left: 0;  /* We can change it to the right side of the page, but thats weird */
+    height: 100%; /* This will make the entire sidebar height the same as the web page */
+    width: 89px; /* This is the entire width of the sidebar */
+    background: lightcoral; /* You can change the background colour if you like */
+    padding: 6px 14px; /* padding of the entire sidebar */
+    transition: all 0.5s ease; /* This is the speed of the sidebar opening and closing. O.5 sec feels the best */
 }
 
-.sidebar.active{
-    width: 240px;
+.sidebar.active_sidebar{
+    width: 240px; /* The sidebar will expand by 240px when clciked on "=" icon */
 }
 
-.sidebar .logo_content .logo{
-    color: #fff;
-    display: flex;
-    height: 50px;
+/* below is modifing and editing the logo and Flowlist text */
+.sidebar .logo_div .logo{
+    color:white;
+    display: flex; /* container */
+    height: 50px;  /* You can think of this as font sizing our text and logo */
     width: 100%;
     align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s ease;
+    opacity: 0;     /* when the sidbar closes, the content (logo, text) will hide */
+    pointer-events: none;   /* nothing happens that changes the DOM of this element */
+    transition: all 0.5s ease;  /* fading animation */
 }
 
-.sidebar.active .logo_content .logo{
-    opacity: 1;
-    pointer-events: none;
+/* logo and Flowlist text appears when sidebar opens */
+.sidebar.active_sidebar .logo_div .logo{
+    opacity: 1; /* when the sidbar closes, the content (logo, text) will appear */
+    pointer-events: none; /* nothing happens that changes the DOM of this element */
 }
 
-.logo_content .logo i{
-    font-size: 20px;
+/* This changes the size of the logo */
+.logo_div .logo i{
+    font-size: 35px;
     margin-right: 5px;
 }
 
-.logo_content .logo .logo_name{
+/* This changes the size of the Flowlist text */
+.logo_div .logo .logo_name{
     font-size: 25px;
-    font-weight: 400;
+    /* font-weight: 400; */
 }
 
+/* This selector is changing the property of the menu icon */
 .sidebar #button_sidebar{
     position: absolute;
-    color: #fff;
+    color: white;
     left: 50%;
     top: 6px;
-    font-size: 20px;
+    font-size: 25px;
     height: 50px;
     width: 50px;
     text-align: center;
-    line-height: 50px;
-    transform: translateX(-50%);
+    line-height: 48px;  /* space above the height of a line box */
+    transform: translateX(-50%); 
 }
 
-.sidebar.active #button_sidebar{
-    left: 90%;
+/* how far the sidebar menu will move from closed to expanded and vise versa */
+.sidebar.active_sidebar #button_sidebar{
+    left: 87%;
 }
 
+/* horizontal line */
+.sidebar .h_line{
+    margin: 4px;
+    border: none;
+    height: 1px;
+    background-color: white;
+}
+
+/* Some spacing between the logo/menu icons and the component links */
 .sidebar ul{
-    margin-top: 20px;
+    margin-top: 8px;
 }
 
 .sidebar ul li{
     position: relative;
-    height: 50px;
-    width: 100%;
+    height: 60px;   /* Spacing between each component */
+    width: 95%;    /* width of list area */
     margin: 0 5px;
-    list-style: none;
+    list-style: none; /* changing the list style type to none. (no bullet points) */
     line-height: 50px;
-    border-radius: 12px;
+    border-radius: 12px; /* rounded out the corners of the box. Might change it later*/
 }
 
-.sidebar .link_names{
+/* the component names wouldn't be shown when the sidebar is closed */ 
+.sidebar .component_names{
     opacity: 0;
     pointer-events: none;
-    transition: all 0.5s ease;
+    transition: all 0.16s ease;
 }
 
-.sidebar.active .link_names{
+/* the component names will be shown when the sidebar is expanded */
+.sidebar.active_sidebar .component_names{
     opacity: 1;
-    pointer-events: auto;
-}
-
-.sidebar ul li .tooltip{
-    position: absolute;
-    left: 122px;
-    top: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 6px;
-    height: 35px;
-    width: 122px;
-    background: #fff;
-    line-height: 35px;
-    text-align: center;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    transition: 0s;
-    opacity: 0;
     pointer-events: none;
 }
 
-.sidebar.active ul li .tooltip{
+
+.sidebar ul li .text_retracted{
+    position: absolute;
+    /* The following below is positioning the floating text that appears when the sidebar is closed */
+    left: 125px;
+    top: 0;
+    transform: translate(-50%, -62%); /* (x, y) */
+    border-radius: 8px;
+    height: 40px;
+    width: 125px;
+    line-height: 40px;
+    text-align: center;
+    color:rgb(128, 130, 240);   /* Font colour */
+    background: rgba(255, 255, 255, 0.900); /* the box is white, but slightly to a grayer tone. It's mainly just to help not blend with the background */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25); /* light shadow below the boxes to make it look like it's floating (mainly so the box doesn't blend with the white background */
+    /* transition: 0.5s; */
+    opacity: 0; /* will not be shown */
+    pointer-events: none;
+}
+
+
+.sidebar.active_sidebar ul li .text_retracted{
     display: none;
 }
 
-.sidebar ul li:hover .tooltip{
-    transition: all 0.5s ease;
+/* when hovering over the components in closed view, you can view the component text */
+.sidebar ul li:hover .text_retracted{
+    transition: all 0.52s ease;
     opacity: 1;
     top: 50%;
 }
 
+/* link covering area */
 .sidebar ul li a{
-    color:#fff;
+    color:white;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -136,8 +162,8 @@ body{
 }
 
 .sidebar ul li a:hover{
-    color: lightcoral;
-    background: #fff;
+    color: rgb(128, 130, 240);
+    background: white;
 }
 
 .sidebar ul li a i{
