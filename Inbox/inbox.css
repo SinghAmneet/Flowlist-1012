@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: white;
+  width: 100%;
+}
+header {
+  background-color: lightcoral;
+  margin: 0;
+  display: block;
+
+}
+h2 {
+  margin: 0;
+  color: white;
+  
+}
+#inbox-logo {
+    border:none;
+    color:white;
+    padding-right: 15px;
+  
+   
+}
+/*
+hr {
+  color: lightcoral;
+  
+}
+*/
+h4 {
+    font-weight: bold;
+    color:grey;
+    text-decoration: underline;
+  
+}
+
+
+button {
+    background-color: lightcoral;
+    color: white;
+    border-radius: 3px;
+    outline: none;
+    border:none;
+
+}
+/*search bar*/
+
+.search-bar{
+float: right;
+display: flex;
+
+}
+  
+  .search-text {
+    width: 100%;
+    border: 3px solid lightgrey;
+    border-right: none;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: darkgray;
+  }
+  
+  .search-button { 
+    width: 40px;
+    border: 1px solid lightcoral;
+    background: lightcoral;
+    color: white;
+    text-align: right;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .search-text:focus {
+      color: black;
+  }
+ 

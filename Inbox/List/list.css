@@ -1,0 +1,111 @@
+/*import Roboto font from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*list form*/
+* {
+margin:0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+}
+/*body of website*/
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+/*wrapper class*/
+.wrapper {
+    margin: 120px auto;
+    max-width: 400px; /*change later if you want a wider form box*/
+    width:100%;
+    background-color:white; /*list form box is white*/
+    border-radius: 5px; /*round corners of form*/
+    padding:25px;
+    border: 3px solid lightcoral;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+/*wrapper header*/
+.wrapper header {
+    font-size: 15px;
+    font-weight: bold;
+}
+hr {
+    color:lightcoral;
+}
+/* task form field*/
+.wrapper .inputList {
+    display: flex;
+    height: 45px;
+    width:100%;
+    margin: 20px 0;
+}
+.inputList input { /*the input box inside "Create Task"*/
+width: 85%;
+height:100%;
+border: 1px solid lightcoral;
+font-size: 15px;
+border-radius: 3px;
+padding-left: 15px;
+
+}
+.inputList button { /*the button next to the "Create Task"*/
+    width: 60px;
+    height:100%;
+    border:none;
+    outline: none;
+    background-color: lightcoral;
+    font-size: 15px;
+    border-radius: 3px;
+    margin-left:5px;
+    color:white;
+
+
+}
+.wrapper .toDoList { /* items listed, creates a sidebar when items get long*/
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.toDoList li {
+    height: 30px;
+    list-style: none;
+    position: relative; /* ensure trash icon stays within form box*/
+    background-color:white;/*of lists*/
+    border-radius: 3px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden; /*hide trash icons*/
+
+}
+.toDoList li span {
+    position: absolute;
+    right:-45px;
+    color: white;
+    background: lightcoral; /*trash icon background*/
+    width: 45px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.4s ease; /*makes trash icon hover smooth*/
+}
+/*hover trash icon*/
+.toDoList li:hover span {
+    right:0px;
+  
+}
+.wrapper .footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+.footer button { /*"Clear All" button*/
+border:none;
+background: lightcoral;
+color: white;
+font-size: 15px;
+cursor: pointer;
+border-radius: 3px;
+padding: 6px 10px;
+}
