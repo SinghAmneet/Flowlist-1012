@@ -138,7 +138,6 @@ body{
     pointer-events: none;
 }
 
-
 .sidebar.active_sidebar ul li .text_retracted{
     display: none;
 }
@@ -172,6 +171,26 @@ body{
     border-radius: 12px;
     line-height: 50px;
     text-align: center;
+}
+
+/* Github link icon */
+.sidebar .github_div{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 37px;
+    display: flex;
+    height: 35px;
+}
+
+.sidebar .github_div a{
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.sidebar .github_div a:hover{
+    color: rgb(128, 130, 240);
 }
 
 .page_content{
