@@ -7,8 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <title> ADD LATER </title> -->
+
     <!-- CSS -->
-    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="/Sidebar/sidebar.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <!-- CDN Link to Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
@@ -34,7 +39,7 @@
 
             <!-- Inbox Compoenet -->
             <li>
-                <a href="#"> <!-- Added # for now as links. We will replace them for each component -->
+                <a onclick="inbox()"> <!-- Added # for now as links. We will replace them for each component -->
                     <i class='bx bxs-inbox'></i>
                     <span class="component_names">Inbox</span>
                 </a>
@@ -99,7 +104,7 @@
     </div>
 
     <div class="page_content">
-        <div id="example_text"></div>
+        <div id="component_content"></div>
     </div>
 
     <!-- JS portion of the sidebar -->
@@ -115,6 +120,13 @@
             sidebar.classList.toggle("active_sidebar");
             }
         }
+
+        function inbox(){
+            $(function(){
+                $("#component_content").load("/Inbox/inbox.html"); 
+            });
+        }
+
     </script>
 </body>
 </html>
