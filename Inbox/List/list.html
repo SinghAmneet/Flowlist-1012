@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Lists</title>
-        <link rel="stylesheet" href="/Inbox/List/list.css"/>
-        <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class ="wrapper">
-<header>List Name</header>
-<hr/>
-<h6>Date created:</h6> 
-<div class="inputList">
-  <input type="text" placeholder="Create a task"/>
-  <button>+</button>
-</div>
-<ul class="toDoList">
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span></li>
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span></li>
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span> </li>
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span></li>
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span></li>
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span></li>
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span></li>
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span></li>
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span></li>
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span></li>
-  <li>buy coffee<span><i class="bx bxs-trash"></i></span></li>
-  
-</ul>
-<div class="footer">
-  <span> Your <span class="pendingTasks"></span> pending lists</span>
-  <button>Clear all</button>
+  <head>
+    <title>Lists</title>
+    <!--linking css, box icons, and js files-->
+    <link rel="stylesheet" href="list.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--added defer to js file src to make it load immediately-->
+    <script src="list.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Lists</header>
+      <hr />
+      <h6>
+        Date created:
+        <p id="listDate"></p>
+      </h6>
+      <div class="inputList">
+        <input type="text" placeholder="Create a list" />
+        <button>+</button>
+      </div>
+      <ul class="toDoList">
+        <!--an empty list-->
+      </ul>
+      <!--creating text formatting forum box?
 
-</div>
-</div>
-<script src="list.js"></script>
-</body>
+<h6>Text Formatting</h6>
+<textarea rows="6" cols="35">
+
+</textarea>
+--->
+      <div class="footer">
+        <span> Your <span class="pendingLists"></span> pending lists</span>
+        <button>Clear all</button>
+      </div>
+    </div>
+  </body>
 </html>
