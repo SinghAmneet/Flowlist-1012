@@ -109,3 +109,7 @@ cursor: pointer;
 border-radius: 3px;
 padding: 6px 10px;
 }
+/*align the date*/
+h6, #listDate {
+    display: inline;
+    }
