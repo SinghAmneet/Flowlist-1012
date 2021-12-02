@@ -37,7 +37,7 @@ body{
 .sidebar .logo_div .logo{
     color:white;
     display: flex; /* container */
-    height: 50px;  /* You can think of this as font sizing our text and logo */
+    height: 50px;  
     width: 100%;
     align-items: center;
     opacity: 0;     /* when the sidbar closes, the content (logo, text) will hide */

@@ -1,0 +1,49 @@
+/* Flowlist Front Page CSS */
+
+/* CDN Link from Google Fonts for Roboto style sheet*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: "Roboto";
+}
+
+.navbar {
+    background: lightcoral;
+    padding: 1em;
+    width: 100%;
+}
+
+.navbar .logo_link .logo_div .logo {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.logo_div .logo i {
+    font-size: 50px;
+    margin-right: 5px;
+}
+
+.logo_div .logo .logo_name{
+    font-size: 50px;
+}
+
+.navbar nav {
+    display: none;
+}
+
+.navbar .container{
+    display: flex;
+    place-content: space-between;
+}

@@ -2,131 +2,134 @@
 <html lang="en">
 <!-- HTML File for sidebar  -->
 <!-- Flowlist, Debug Web-Bug -->
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title> ADD LATER </title> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <title> ADD LATER </title> -->
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/Sidebar/sidebar.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="/Sidebar/sidebar.css">
 
-    <!-- jQuery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    <!-- CDN Link to Boxicons -->
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!-- CDN Link to Boxicons -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-</head>
-<body>
-    <!-- the div .sidebar is, well, the entire sidbar area. This div will contain all of the components, logo, menu button, and JS portion of retracting/expanding the sidebar -->
-    <!-- I used classes instead of id's for consistent styling multiple elements in CSS. -->
-    <div class="sidebar">
-        <!-- This div contains the logo and menu button "=" at the top of the sidebar -->
-        <div class="logo_div">
-            <!-- This div contains the logo.  -->
-            <div class="logo">
-                <!-- The image used as our logo is called "layer". I know I could have used the <span> tag as an example in stead of <i>
-                tag to display icons. However, on Boxicons site, they recommend using <i> instead. Not sure why, but hey it works -->
-                <i class='bx bxs-layer'></i> <!-- Flowlist Logo -->
-                <div class="logo_name">Flowlist</div>
+    </head>
+    <body>
+        <!-- the div .sidebar is, well, the entire sidbar area. This div will contain all of the components, logo, menu button, and JS portion of retracting/expanding the sidebar -->
+        <!-- I used classes instead of id's for consistent styling multiple elements in CSS. -->
+        <div class="sidebar">
+            <!-- This div contains the logo and menu button "=" at the top of the sidebar -->
+            <div class="logo_div">
+                <!-- This div contains the logo.  -->
+                <div class="logo">
+                    <!-- The image used as our logo is called "layer". I know I could have used the <span> tag as an example in stead of <i>
+                    tag to display icons. However, on Boxicons site, they recommend using <i> instead. Not sure why, but hey it works -->
+                    <i class='bx bxs-layer'></i> <!-- Flowlist Logo -->
+                    <div class="logo_name">Flowlist</div>
+                </div>
+                <i class='bx bx-menu' id="button_sidebar"></i> <!-- Sidebar menu icon "=" --> 
             </div>
-            <i class='bx bx-menu' id="button_sidebar"></i> <!-- Sidebar menu icon "=" --> 
+            <hr class="h_line">
+            <!-- The menu bar will contain all of the links to the components in an unorder list like fashion -->
+            <ul class="menu_bar">
+
+                <!-- Inbox Compoenet -->
+                <li>
+                    <a onclick="inbox_button()"> <!-- Added # for now as links. We will replace them for each component -->
+                        <i class='bx bxs-inbox'></i>
+                        <span class="component_names">Inbox</span>
+                    </a>
+                    <!-- This tag will display the component name on the side when the sidebar is closed -->
+                    <span class="text_retracted">Inbox</span>
+                </li>
+
+                <!-- Tasks -->
+                <!--             
+                <li>
+                    <a href="#">
+                        <i class='bx bx-task'></i>
+                        <span class="component_names">Tasks</span>
+                    </a>
+                    <span class="text_retracted">Tasks</span>
+                </li>
+                -->
+
+                <!-- Lists -->
+                <li>
+                    <a>
+                        <i class='bx bx-list-ul'></i>
+                        <span class="component_names">Lists</span>
+                    </a>
+                    <span class="text_retracted">Lists</span>
+                </li>
+
+                <!-- Archive -->
+                <li>
+                    <a>
+                        <i class='bx bxs-archive-in'></i>
+                        <span class="component_names">Archive</span>
+                    </a>
+                    <span class="text_retracted">Archive</span>
+                </li>
+                
+                <!-- Trash -->
+                <li>
+                    <a href="#">
+                        <i class='bx bx-trash'></i>
+                        <span class="component_names">Trash</span>
+                    </a>
+                    <span class="text_retracted">Trash</span>
+                </li>
+
+                <!-- Log Out -->
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out' id="log_out"></i>
+                        <span class="component_names">Log Out</span>
+                    </a>
+                    <span class="text_retracted">Log Out</span>
+                </li>
+            </ul>
+
+            <!-- Github Link -->
+            <div class="github_div">
+                <a href="https://github.com/ASofficial06/Flowlist-1012" target="_blank">
+                    <i class='bx bxl-github'></i>
+                </a>
+            </div>
         </div>
-        <hr class="h_line">
-        <!-- The menu bar will contain all of the links to the components in an unorder list like fashion -->
-        <ul class="menu_bar">
 
-            <!-- Inbox Compoenet -->
-            <li>
-                <a onclick="inbox()"> <!-- Added # for now as links. We will replace them for each component -->
-                    <i class='bx bxs-inbox'></i>
-                    <span class="component_names">Inbox</span>
-                </a>
-                <!-- This tag will display the component name on the side when the sidebar is closed -->
-                <span class="text_retracted">Inbox</span>
-            </li>
-
-            <!-- Tasks -->
-            <!--             
-            <li>
-                <a href="#">
-                    <i class='bx bx-task'></i>
-                    <span class="component_names">Tasks</span>
-                </a>
-                <span class="text_retracted">Tasks</span>
-            </li>
-            -->
-
-            <!-- Lists -->
-            <li>
-                <a>
-                    <i class='bx bx-list-ul'></i>
-                    <span class="component_names">Lists</span>
-                </a>
-                <span class="text_retracted">Lists</span>
-            </li>
-
-            <!-- Archive -->
-            <li>
-                <a>
-                    <i class='bx bxs-archive-in'></i>
-                    <span class="component_names">Archive</span>
-                </a>
-                <span class="text_retracted">Archive</span>
-            </li>
-            
-            <!-- Trash -->
-            <li>
-                <a href="#">
-                    <i class='bx bx-trash'></i>
-                    <span class="component_names">Trash</span>
-                </a>
-                <span class="text_retracted">Trash</span>
-            </li>
-
-            <!-- Log Out -->
-            <li>
-                <a href="#">
-                    <i class='bx bx-log-out' id="log_out"></i>
-                    <span class="component_names">Log Out</span>
-                </a>
-                <span class="text_retracted">Log Out</span>
-            </li>
-        </ul>
-
-        <!-- Github Link -->
-        <div class="github_div">
-            <a href="https://github.com/ASofficial06/Flowlist-1012" target="_blank">
-                <i class='bx bxl-github'></i>
-            </a>
+        <div class="page_content">
+            <div id="component_content"></div>
         </div>
-    </div>
+        
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- JS portion of the sidebar -->
+        <script>
+            // querySelector() is a method of the element interface. It allows you yo find the first element that matches one or more CSS selectors
+            window.onload = function(){
+                var btn = document.querySelector("#button_sidebar");
+                var sidebar = document.querySelector(".sidebar");
 
-    <div class="page_content">
-        <div id="component_content"></div>
-    </div>
-
-    <!-- JS portion of the sidebar -->
-    <script>
-        // querySelector() is a method of the element interface. It allows you yo find the first element that matches one or more CSS selectors
-        window.onload = function(){
-            var btn = document.querySelector("#button_sidebar");
-            var sidebar = document.querySelector(".sidebar");
-
-            btn.onclick = function(){
-            // classList is a DOM property that returns class name of an element as a DOMTokenList object. This property is using the toggle method. More info here: https://www.w3schools.com/jsref/prop_element_classlist.asp
-            // When you click on sidebar menu icon on the top, it will remove (not really, returns a false value) sidebar class elements, but will add returns true)(closed) sidebar class elements if you click the icon again (Expanded)
-            sidebar.classList.toggle("active_sidebar");
+                btn.onclick = function(){
+                // classList is a DOM property that returns class name of an element as a DOMTokenList object. This property is using the toggle method. More info here: https://www.w3schools.com/jsref/prop_element_classlist.asp
+                // When you click on sidebar menu icon on the top, it will remove (not really, returns a false value) sidebar class elements, but will add returns true)(closed) sidebar class elements if you click the icon again (Expanded)
+                sidebar.classList.toggle("active_sidebar");
+                }
             }
-        }
 
-        function inbox(){
-            $(function(){
-                $("#component_content").load("/Inbox/inbox.html"); 
-            });
-        }
+            function inbox_button(){
+                $(function(){
+                    $("#component_content").load("/Inbox/inbox.html"); 
+                });
+            }
 
-    </script>
-</body>
+        </script>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    </body>
 </html>
