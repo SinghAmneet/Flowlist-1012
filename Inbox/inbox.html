@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Flowlist</title>
-    <link rel="stylesheet" href="/Inbox/inbox.css" />
+    <link rel="stylesheet" href="inbox.css" />
     <!--adding icons source-->
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"rel="stylesheet"/>
-      <script src="/Inbox/inbox.js"></script>
+    <script src="inbox.js" defer></script>
+    
 
   </head>
   <body>
@@ -17,14 +18,12 @@
 
      
   </header>
+    <!--search bar area-->
             <div class="search-bar">
-              <input type="text" class="search-text" placeholder="Search for tasks and lists...">
+              <input type="text" class="search-text" placeholder="Search for lists...">
               <button type="submit" class="search-button"><i class='bx bx-search' ></i></button>
            </div>
-     <!---- <hr/-->
-      <h4>Recent Tasks</h4>
-      <button>+</button>
-      <br/>
+    
       <h4>Recent Lists</h4>
       <button onclick ="listTask()">+</button>
 
