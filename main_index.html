@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Flowlist Front Page</title>
+        <title>Flowlist | Front Page</title>
 
         <!-- CSS FILE -->
         <link rel="stylesheet" href="main_index.css">
@@ -15,16 +15,13 @@
 
     </head>
     <body>
-        <!-- Navigation bar -->
+        <!-- Navbar section -->
         <div class="navbar">
-            <div class="container">
-
+            <header>
                 <a href="main_index.html" class="logo_link">
                     <div class="logo_div">
-                        <!-- This div contains the logo.  -->
+                        
                         <div class="logo">
-                            <!-- The image used as our logo is called "layer". I know I could have used the <span> tag as an example in stead of <i>
-                            tag to display icons. However, on Boxicons site, they recommend using <i> instead. Not sure why, but hey it works -->
                             <i class='bx bxs-layer'></i> <!-- Flowlist Logo -->
                             <div class="logo_name">Flowlist</div>
                         </div> 
@@ -32,39 +29,35 @@
                 </a>
 
                 <nav>
-                    <ul class="left_nav">
-                        <li> <a href="#">Features</a> </li>
-                        <li> <a href="#">About Us</a> </li>
+                    <ul class="nav_links">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">About Us</a></li>
                     </ul>
-
-                    <ul class="right_nav">
-                        <li> <a href="#">Log in</a> </li>
-                        <li class="github_logo">
-                            <a href="https://github.com/ASofficial06/Flowlist-1012" target="_blank">
-                                <i class='bx bxl-github'></i>
-                            </a>
-                        </li>
-                    </ul>
-
                 </nav>
-            </div>
+                <div>
+                    <a href="/LogSignIn/Login.html">
+                        <button>Login</button>
+                    </a>
+                </div>        
+            </header>
         </div>
 
-        <!-- body of front page -->
-        <section class="main_body">
-            <div class="container">
-                <div class="left_column">
-                    <h4 class="subtext">Organize Your Life With A Bulletted List App That Doesn't Suck</h4>
+        <!-- Hero section aka the rest of the body below the navbar -->
+        <div class="main">
+            <div class="main_container">
+                <div class="main_content">
                     <h1>Flowlist</h1>
-
-                    <div class="main_body_cta">
-                        <a href="#" class="signup_cta">Sign Up For Free</a>
-                    </div>
+                    <h4 class="subtext">Organize Your Life With A Bulletted List App That Doesn't Suck</h4>
+    
+                    <a href="/LogSignIn/Login.html">
+                        <button class="signup_button">Sign Up For Free</button>
+                    </a>
+                </div>
+                <div class="img_container">
+                    <img src="LogSignIn/FrontPage_Images/undraw_note_list_re_r4u9.svg" alt="Illustration" id="main_body_image">
                 </div>
             </div>
-        </section>
-
-        <img src="LogSignIn/FrontPage_Images/clipboard-list-svgrepo-com(1).svg" alt="Illustration" class="main_body_image">
+        </div>
 
     </body>
 </html>
