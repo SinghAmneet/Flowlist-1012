@@ -59,8 +59,7 @@ header{
 }
 
 .nav_links li a:hover{
-    color: rgb(128, 130, 240);
-    background-color: white;
+    color: rgba(255, 255, 255, 0.761);
 }
 
 button{
@@ -94,4 +93,13 @@ button:hover{
 .main_content h1{
     font-size: 4rem;
     background-size: 100%;
+}
+
+.main_content h4{
+    margin-top: 3px;
+    margin-bottom: 30px;
+}
+
+.signup_button{
+    font-size: 20px;
 }
