@@ -5,6 +5,7 @@ var toDoList = document.querySelector(".toDoList"); //variable for class "toDoLi
 var deleteBtn = document.querySelector(".footer button"); // variable for the "Clear All button"
 var arrayList = [];
 
+
 // making input box editable by user to enter their tasks
 //when user enters characters in the input box, the onkeyup event executes
 inputBox.onkeyup = function () {
@@ -12,7 +13,6 @@ inputBox.onkeyup = function () {
   inputBox.value;
 
 }
-
 showLists(); //show lists
 
 //when user clicks on the "+" button
@@ -52,7 +52,7 @@ function showLists() {
   var newLists = "";
   //this subsitutes the HTML empty li content with the user's lists, with the trash icons on the right side 
   arrayList.forEach(function (element, index) {
-    newLists = newLists + `<li>${element}<span class="icon" onclick="deleteList(${index})"><i class='bx bxs-trash-alt'></i></span></li>`;
+    newLists = newLists + `<li>• ${element}<span class="icon" onclick="deleteList(${index})"><i class='bx bxs-trash-alt'></i></span></li>`;
   });
 
   toDoList.innerHTML = newLists;
@@ -76,4 +76,4 @@ deleteBtn.onclick = function () { //when "Clear All" button is clicked
 //add last modified date next to "Date created"
 d = document.lastModified;
 document.getElementById("listDate").innerHTML = d;
-
+//
