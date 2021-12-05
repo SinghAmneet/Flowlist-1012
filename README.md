@@ -45,6 +45,17 @@ When creating tasks, users can prioritize what tasks are important by filtering 
 [---> Link to Lo-Fi Wireframe UI Design <---](https://drive.google.com/file/d/1bCERvGgOveNpXz0KfR1EvmwaKmdso0ol/view?usp=sharing)
 
 ---
+#### UPDATE: 12/04/2021
+
+Some of the implementation is completed from the functional requirments or slightly altered from previous our ideas. 
+
+Unfinished development:
+
+1. need content in "features" and "about us" sections of main front page.
+2. need to implement and develop content to the components section of the sidebar. This includes Tasks, Archive, and Trash sections of this application
+
+---
+
 <!--For more information, you can check out our Google Docs [HERE](https://docs.google.com/document/d/1rmXR6-ixbtCNF4HPbZWV0VuwITY2e_miXYyQVbG6H3c/edit?usp=sharing) (You need to be signed in your yorku email)-->
 
 
