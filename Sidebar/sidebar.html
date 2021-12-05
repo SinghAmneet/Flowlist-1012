@@ -11,6 +11,10 @@
         <!-- CSS -->
         <link rel="stylesheet" href="/Sidebar/sidebar.css">
 
+        <!-- JS -->
+
+        <script src="/Sidebar/sidebar.js"></script>
+
         <!-- jQuery CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
@@ -39,7 +43,7 @@
 
                 <!-- Inbox Compoenet -->
                 <li>
-                    <a onclick="inbox_button()"> <!-- Added # for now as links. We will replace them for each component -->
+                    <a href="#" onclick="inbox_button()"> <!-- Added # for now as links. We will replace them for each component -->
                         <i class='bx bxs-inbox'></i>
                         <span class="component_names">Inbox</span>
                     </a>
@@ -47,20 +51,19 @@
                     <!-- <span class="text_retracted">Inbox</span> -->
                 </li>
 
-                <!-- Tasks -->
-                <!--             
+                <!-- Tasks           -->
                 <li>
-                    <a href="#">
+                    <a href="#" onclick="later_development()">
                         <i class='bx bx-task'></i>
                         <span class="component_names">Tasks</span>
                     </a>
-                    <span class="text_retracted">Tasks</span>
+                    <!-- <span class="text_retracted">Tasks</span> -->
                 </li>
-                -->
+               
 
                 <!-- Lists -->
                 <li>
-                    <a href="#">
+                    <a href="#" onclick="later_development()">
                         <i class='bx bx-list-ul'></i>
                         <span class="component_names">Lists</span>
                     </a>
@@ -69,7 +72,7 @@
 
                 <!-- Archive -->
                 <li>
-                    <a href="#">
+                    <a href="#" onclick="later_development()">
                         <i class='bx bxs-archive-in'></i>
                         <span class="component_names">Archive</span>
                     </a>
@@ -78,7 +81,7 @@
                 
                 <!-- Trash -->
                 <li>
-                    <a href="#">
+                    <a href="#" onclick="later_development()">
                         <i class='bx bx-trash'></i>
                         <span class="component_names">Trash</span>
                     </a>
@@ -106,31 +109,6 @@
         <div class="page_content">
             <div id="component_content"></div>
         </div>
-        
-        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- JS portion of the sidebar -->
-        <script>
-            // querySelector() is a method of the element interface. It allows you yo find the first element that matches one or more CSS selectors
-            window.onload = function(){
-                var btn = document.querySelector("#button_sidebar");
-                var sidebar = document.querySelector(".sidebar");
-
-                btn.onclick = function(){
-                // classList is a DOM property that returns class name of an element as a DOMTokenList object. This property is using the toggle method. More info here: https://www.w3schools.com/jsref/prop_element_classlist.asp
-                // When you click on sidebar menu icon on the top, it will remove (not really, returns a false value) sidebar class elements, but will add returns true)(closed) sidebar class elements if you click the icon again (Expanded)
-                sidebar.classList.toggle("active_sidebar");
-                }
-            }
-
-            function inbox_button(){
-                $(function(){
-                    $("#component_content").load("/Inbox/inbox.html"); 
-                });
-            
-            }
-
-        </script>
-        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     </body>
 </html>
