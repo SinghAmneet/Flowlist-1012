@@ -1,0 +1,24 @@
+{
+  "name": "flowlist-1012",
+  "version": "1.0.0",
+  "description": "### Name of the Team: Debug Web-Bug",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASofficial06/Flowlist-1012.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ASofficial06/Flowlist-1012/issues"
+  },
+  "homepage": "https://github.com/ASofficial06/Flowlist-1012#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.6.0"
+  }
+}
