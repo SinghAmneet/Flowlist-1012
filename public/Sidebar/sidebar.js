@@ -14,7 +14,7 @@ window.onload = function(){
 
 function inbox_button(){
     $(function(){
-        $("#component_content").load("/Inbox/inbox.html"); 
+        $("#component_content").load("/public/Inbox/inbox.html"); 
     });
 
 }
