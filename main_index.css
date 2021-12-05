@@ -3,47 +3,103 @@
 /* CDN Link from Google Fonts for Roboto style sheet*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
-}
-
-body {
-    background: white;
+    /* background-color: #edf0f1; */
     font-family: "Roboto";
+    list-style: none;
 }
 
-.navbar {
-    background: lightcoral;
-    padding: 1em;
-    width: 100%;
-}
-
-.navbar .logo_link .logo_div .logo {
+li, a, button{
     text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    pointer-events: none;
+    color: #edf0f1;
 }
 
-.logo_div .logo i {
-    font-size: 50px;
+.navbar{
+    background: lightcoral;
+    border-bottom: 0px;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 2%;
+}
+
+.logo_div .logo{
+    color:white;
+    display: flex; /* container */
+    height: 50px;  
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo_div .logo i{
+    font-size: 55px;
     margin-right: 5px;
 }
 
 .logo_div .logo .logo_name{
     font-size: 50px;
+    /* font-weight: 400; */
 }
 
-.navbar nav {
-    display: none;
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+    font-size: 20px;
 }
 
-.navbar .container{
-    display: flex;
-    place-content: space-between;
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: rgba(255, 255, 255, 0.761);
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(128, 130, 240, 1);
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0 5px 5px rgb(105, 107, 198);
+}
+
+button:hover{
+    background-color: rgba(128, 130, 240, 0.8);
+}
+
+.main_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 50px;
+}
+
+.main_content h1{
+    font-size: 4rem;
+    background-size: 100%;
+}
+
+.main_content h4{
+    margin-top: 3px;
+    margin-bottom: 30px;
+}
+
+.signup_button{
+    font-size: 20px;
 }
