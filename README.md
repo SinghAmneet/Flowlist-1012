@@ -47,7 +47,7 @@ When creating tasks, users can prioritize what tasks are important by filtering 
 ---
 #### UPDATE: 12/04/2021
 
-Some of the implementation is completed from the functional requirments or slightly altered from previous our ideas. 
+Some of the implementation is completed from the functional requirments or slightly altered from our previous ideas. 
 
 Unfinished development:
 
