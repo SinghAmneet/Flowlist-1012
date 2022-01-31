@@ -15,9 +15,9 @@ When creating tasks, users can prioritize what tasks are important by filtering 
 
 | Name | Section | Lab# | Email |
 | ---- | ---- | ---- | ---- | 
-| Amneet Singh | B | 1 | amneet06@my.yorku.ca |
-| Susan-Ngoc Nguyen | B | 1 | sn98@my.yorku.ca |
-| Xiyu Zhang | B | 1 | xiyu@my.yorku.ca |
+| Amneet Singh | B | 1 | <!--amneet06@my.yorku.ca--> |
+| Susan-Ngoc Nguyen | B | 1 | <!--sn98@my.yorku.ca--> |
+| Xiyu Zhang | B | 1 | <!--xiyu@my.yorku.ca--> |
 
 ---
 
